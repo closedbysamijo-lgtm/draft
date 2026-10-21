@@ -173,6 +173,41 @@ h2.sec::after{background:linear-gradient(270deg,transparent,var(--gold))}
 .legal .brk img{width:56px;height:56px;border-radius:50%}
 .contactline{font-size:.8rem;color:#bbb;margin-top:1rem}
 
+/* new sections */
+.blk{margin:0 1rem 1rem;background:#fff;border:1px solid var(--hair);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.blk .in{padding:1.2rem 1.3rem 1.4rem}
+.blk p,.blk li{font-size:.94rem;line-height:1.7;color:#2b2822;margin:0 0 .7rem}
+.blk ul{margin:.2rem 0 .8rem;padding-left:1.1rem}.blk li{margin:0 0 .3rem}
+.blk h3{font-family:var(--serif);font-weight:500;font-size:1.3rem;line-height:1.25;margin:0 0 .6rem}
+.blk h4{font-family:var(--serif);font-weight:500;color:var(--mauve);font-size:1.02rem;margin:1rem 0 .3rem}
+.ban{background:linear-gradient(160deg,#0E0E0F,#2b2411);color:var(--gold-light);text-align:center;padding:1.6rem 1rem 0}
+.ban b{display:block;font-family:var(--serif);font-weight:500;font-size:1.5rem;letter-spacing:.08em}
+.ban span{color:#fff;font-family:var(--serif);font-style:italic;font-size:.95rem}
+.ban svg{display:block;width:100%;height:70px;margin-top:.8rem}
+.btns{display:flex;flex-direction:column;gap:.65rem;margin:.9rem 1rem 0}.blk .btns{margin:1rem 0 0}.btns .btn{width:100%;text-align:center}
+.lead{margin:-.4rem 1.4rem 1rem;text-align:center;font-family:var(--serif);font-style:italic;color:var(--muted);line-height:1.6}
+.cta2{margin:2rem 1rem 1rem;border-radius:22px;background:linear-gradient(160deg,#0E0E0F,#2b2411);border:1px solid var(--gold);padding:1.8rem 1.3rem;text-align:center;box-shadow:var(--shadow)}
+.cta2 h2{font-family:var(--serif);font-weight:500;font-size:1.55rem;line-height:1.25;color:var(--gold-light);margin:0 0 .8rem}
+.cta2 p{font-size:.93rem;line-height:1.7;color:#E8E0CB;margin:0 0 1.1rem}
+.cta2 .btns{margin:0}.cta2 .btn{background:var(--gold);color:#0E0E0F;border-color:var(--gold)}.cta2 .btn.alt{background:transparent;color:var(--gold-light)}
+
+/* search tool */
+.sf{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:1rem 0 .4rem}
+.sf label{font-size:.78rem;font-weight:600;color:var(--muted);display:block}
+.sf input,.sf select{width:100%;margin-top:.25rem;padding:.7rem .8rem;border:1px solid #DCCFA8;border-radius:12px;background:var(--field);font:inherit;font-size:.92rem;color:var(--ink)}
+.sf input:focus,.sf select:focus{outline:0;border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,162,75,.25)}
+.sf .full{grid-column:1/-1}
+.blk small.tip{display:block;margin-top:.9rem;font-size:.82rem;line-height:1.55;color:var(--muted);text-align:center}
+
+.btn[hidden]{display:none}
+.lf{margin-top:.2rem}
+.lf h4{margin:.2rem 0 .1rem}
+.lf input[type=text],.lf input[type=email],.lf input[type=tel]{display:block;width:100%;margin-top:.6rem;padding:.85rem 1rem;border:1px solid #DCCFA8;border-radius:14px;background:var(--field);font:inherit;color:var(--ink)}
+.lf input:focus{outline:0;border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,162,75,.25)}
+.lf label.chk{display:flex;gap:.6rem;align-items:flex-start;margin:.9rem 0;font-size:.82rem;color:var(--muted);line-height:1.5}
+.lf label.chk input{margin-top:.2rem;accent-color:#0E0E0F;width:1.05rem;height:1.05rem;flex:none}
+.lf .msg{margin:.6rem 0 0;font-size:.88rem;color:var(--mauve);text-align:center;min-height:1.1rem}
+.nc-done{text-align:center}.nc-done p{font-family:var(--serif);font-style:italic;color:var(--muted)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::before{animation:none}.btn,.pill,.mail,.guide,.socials a{transition:none}}
 @media(max-width:520px){.towers{display:none}.col{box-shadow:none}}
 </style>
@@ -218,11 +253,23 @@ h2.sec::after{background:linear-gradient(270deg,transparent,var(--gold))}
     <div class="reqbtn" id="reqwrap"><a class="btn" id="reqbtn" href="mailto:sami@coalitionpg.com">Request this day by email</a></div>
   </div>
 
-  <h2 class="sec">Active Listings</h2>
-  <a class="listing" href="#" aria-label="Featured listing">
-    <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="320" height="180" fill="#f1c88f"/><rect y="120" width="320" height="60" fill="#5e7a52"/><rect x="70" y="62" width="180" height="70" fill="#9c4a3a"/><path d="M58 66 160 22l102 44z" fill="#4a4a4f"/><rect x="146" y="88" width="28" height="44" fill="#f4e6c8"/><rect x="92" y="84" width="24" height="28" fill="#2d4a6a"/><rect x="204" y="84" width="24" height="28" fill="#2d4a6a"/><rect x="0" y="0" width="320" height="180" fill="#000" opacity=".12"/></svg>
-    <span class="t"><b>$000,000</b><span>Add your listing address, City, VA</span></span>
-  </a>
+  <h2 class='sec'>🔍 Search Available Homes</h2>
+  <div class='blk' id='search'>
+    <div class='ban'><b>FIND YOUR HOME</b><span>Welcome home starts here</span><svg viewBox='0 0 300 70' preserveAspectRatio='none' aria-hidden='true'><g fill='#C9A24B'><path d='M10 70V42l24-17 24 17v28zM72 70V32l30-22 30 22v38zM150 70V46l20-14 20 14v24zM208 70V38l26-19 26 19v32zM272 70V48l14-10 14 10v22z'/></g></svg></div>
+    <div class='in'>
+    <p>Tell me what you're looking for, then browse every active listing or have Sami send you matching homes.</p>
+    <div class='sf'>
+      <div class='full'><label for='sf-loc'>Location</label><input id='sf-loc' type='text' placeholder='City, neighborhood or ZIP'></div>
+      <div><label for='sf-min'>Min price</label><select id='sf-min'><option value=''>No min</option><option value='200000'>$200,000</option><option value='300000'>$300,000</option><option value='400000'>$400,000</option><option value='500000'>$500,000</option><option value='750000'>$750,000</option></select></div>
+      <div><label for='sf-max'>Max price</label><select id='sf-max'><option value=''>No max</option><option value='300000'>$300,000</option><option value='400000'>$400,000</option><option value='500000'>$500,000</option><option value='750000'>$750,000</option><option value='1000000'>$1,000,000</option></select></div>
+      <div><label for='sf-bed'>Bedrooms</label><select id='sf-bed'><option value=''>Any</option><option value='1'>1+</option><option value='2'>2+</option><option value='3'>3+</option><option value='4'>4+</option><option value='5'>5+</option></select></div>
+      <div><label for='sf-bath'>Bathrooms</label><select id='sf-bath'><option value=''>Any</option><option value='1'>1+</option><option value='2'>2+</option><option value='3'>3+</option><option value='4'>4+</option></select></div>
+    </div>
+    <div class='btns'><a class='btn' href='https://sami.coalitionpg.com/search?q_prioritize=agents.0.id%3D3031419%7Coffice.id%3DKWCP1&amp;propertyType=Multi-Family%7CResidential%7CCondo%7CTownhome%7CFarm%2FRanch%7CVacant+Land&amp;status=1%7C3&amp;view=gallery_view' target='_blank' rel='noopener'>Start Your Home Search →</a></div>
+    <small class='tip'>Tap “Start Your Home Search” to browse all active listings and set price, bedroom and bathroom filters on the search page.</small>
+  </div></div>
+
+  
 
   <!-- connect -->
   <div class="card connect" id="connect">
@@ -242,14 +289,54 @@ h2.sec::after{background:linear-gradient(270deg,transparent,var(--gold))}
   <a class="mail" href="#connect"><span>Join my Mailing List</span></a>
 
   <h2 class="sec">Buying a Home?</h2>
-  <a class="pill buy" href="#"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 12h9M18 12v4M15 12v3"/></svg></span><span>Home Buyer Guide</span></a>
-  <a class="pill" href="#"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 21V4h9v17M14 9h5v12M8 8h3M8 12h3M8 16h3"/></svg></span><span>New Construction Guide</span></a>
+  <a class="pill buy" href="https://closedbysamijo-lgtm.github.io/draft/home-buyer-guide.html" target="_blank" rel="noopener"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 12h9M18 12v4M15 12v3"/></svg></span><span>Download Your Free Home Buyer Guide</span></a>
 
   <h2 class="sec">Selling a Home?</h2>
   <a class="pill sell" href="#"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11 12 3l9 8v10H3z"/><path d="M9 21v-6h6v6"/></svg></span><span>Home Seller Guide</span></a>
 
-  <h2 class="sec">Relocating with the Military?</h2>
-  <a class="pill" href="#"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M12 8.500l1.200 2.500 2.700.3-2 1.900.5 2.700-2.400-1.300-2.400 1.300.5-2.700-2-1.900 2.700-.3z"/></svg></span><span>Military Relocation Guide</span></a>
+  <h2 class='sec'>🏡 New Construction Guide</h2>
+  <div class='blk' id='nc-guide'>
+    <div class='ban'><b>NEW CONSTRUCTION</b><span>Your step-by-step guide to building your dream home</span><svg viewBox='0 0 300 70' preserveAspectRatio='none' aria-hidden='true'><g fill='#C9A24B'><path d='M20 70V40l25-18 25 18v30zM90 70V30l30-22 30 22v40zM170 70V44l22-15 22 15v26zM232 70V36l26-20 26 20v34z'/></g></svg></div>
+    <div class='in'>
+      <p>New construction means a brand-new home with modern layouts, energy-efficient systems, builder warranties and the chance to choose your own finishes. It also comes with its own contracts and timelines, so having your own REALTOR® from the very first visit makes all the difference.</p>
+      <div class='chips' style='margin-bottom:.9rem'><span>Financial Preparation</span><span>Finding the Right Home</span><span>Inspections &amp; Appraisals</span><span>Making an Offer</span><span>Moving In</span></div>
+      <div class='btns'>
+        <button type='button' class='btn' id='nc-open'>Get the Free New Construction Guide</button>
+        <form class='lf' id='nc-form' hidden novalidate>
+          <h4>Where should we send your guide?</h4>
+          <input type='text' id='nc-name' placeholder='Full name (optional)' aria-label='Full name' autocomplete='name'>
+          <input type='email' id='nc-email' placeholder='Email' aria-label='Email' autocomplete='email' required>
+          <input type='tel' id='nc-phone' placeholder='Mobile number' aria-label='Mobile number' autocomplete='tel' required>
+          <label class='chk'><input type='checkbox' id='nc-ok'><span>I agree that Sami Johannes may contact me by email, call or text about my home search. Message and data rates may apply.</span></label>
+          <button class='btn' type='submit'>Unlock the Guide</button>
+          <p class='msg' id='nc-msg' role='status'></p>
+        </form>
+        <div class='nc-done' id='nc-done' hidden>
+          <p>Thank you! Your guide is ready.</p>
+          <a class='btn' id='nc-link' href='#' target='_blank' rel='noopener'>Open the New Construction Guide</a>
+        </div>
+        <a class='btn alt' href='mailto:sami@coalitionpg.com?subject=New%20Construction%20Guidance'>Get Expert Guidance on New Construction Homes</a>
+        <a class='btn alt' href='#book'>Schedule a Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <h2 class='sec'>🇺🇸 Military Relocation Guide</h2>
+  <div class='blk'><div class='in'>
+    <h3>Helping Military Families Relocate with Confidence</h3>
+    <p>As a Certified Military Relocation Professional, Sami understands the pressure of PCS orders and short timelines, and works to make every move smooth.</p>
+    <h4>PCS relocation assistance</h4>
+    <p>Help with buying, selling or renting around your orders, plus remote tours so you can find a home before you arrive.</p>
+    <h4>VA loan guidance</h4>
+    <ul><li>Eligible borrowers can often buy with no down payment</li><li>No monthly mortgage insurance on VA loans</li><li>A funding fee may apply, and some veterans are exempt</li><li>Start early by requesting your Certificate of Eligibility</li></ul>
+    <h4>Relocation timeline &amp; checklist</h4>
+    <ul><li><b>Orders in hand:</b> set a budget and talk with a VA-experienced lender</li><li><b>60–90 days out:</b> choose a neighborhood, tour homes and get pre-approved</li><li><b>30–60 days out:</b> make an offer or sign a lease, then schedule movers</li><li><b>Arrival:</b> set up utilities, update your address and settle in</li></ul>
+    <h4>Moving to Virginia</h4>
+    <p>Sami can match you with military-friendly communities near Fort Gregg-Adams, Hampton Roads and Northern Virginia, based on commute, schools and lifestyle.</p>
+  </div></div>
+  <div class='btns' style='margin-bottom:.4rem'>
+  <a class="pill" href="#"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M12 8.500l1.200 2.500 2.700.3-2 1.900.5 2.700-2.400-1.300-2.400 1.300.5-2.700-2-1.900 2.700-.3z"/></svg></span><span>Download Military Relocation Guide</span></a></div>
+  <div class='btns'><a class='btn alt' href='mailto:sami@coalitionpg.com?subject=Military%20Relocation%20Assistance'>Contact Sami for Military Relocation Assistance</a></div>
 
   <h2 class="sec">Get the Richmond Guide</h2>
   <a class="guide" href="#">
@@ -261,16 +348,19 @@ h2.sec::after{background:linear-gradient(270deg,transparent,var(--gold))}
   </a>
 
   <h2 class="sec">About Keller Williams</h2>
-  <a class="pill" href="#"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.500-4.500"/></svg></span><span>Start Your Home Search</span></a>
+  <a class="pill" href="https://sami.coalitionpg.com/search?q_prioritize=agents.0.id%3D3031419%7Coffice.id%3DKWCP1&amp;propertyType=Multi-Family%7CResidential%7CCondo%7CTownhome%7CFarm%2FRanch%7CVacant+Land&amp;status=1%7C3&amp;view=gallery_view" target="_blank" rel="noopener"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.500-4.500"/></svg></span><span>Start Your Home Search</span></a>
   <a class="pill" href="#"><span class="ico" aria-hidden="true"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAABfCAIAAACoWkQ2AAAkWklEQVR4nO296W5lV5Ymtoa9z3QHTjExQhGapSxlV2Z1ZzcSsA0YMOw39Rv4Afwj2wa6Ua50ZakylZIipJjIGEhe3uEMe1hr+cdlRIYkThHKSgMFfiBA4JJ3n8PvrrP22t8aCHCFK1zhCn8F4Pmv2mmv/+jFK1we7vRXiQhAAQxAzQAAAQGMkQhhEPnb3uS/H5xCNyN+NpneHY8Lx1kVzJwxI6uhAs5z+GY52+9Wf/t7/XeAU+hu2L3XjL+Ybo69U8sWkstE4AW5R3iRi17SFd3vhlPodggT528U1Y53HlQ1VOyYqwB0rGIIG67429/ovw+cQrcZlEgbXFwjV+QIgGNX+rJqFSjGGWBFRIhrn36Ft8IpdBNghTRBnhhwDBTCiNmjN7MqpUp0xEyIZld8vzVOobskqgxoGAitUYGcOfdo6JArsNohZtArrt8J9NOXHGJFviZfAjrJJBFzgDyARAJlAkb0RKdH7Fc4F6f5bgA0JRU0QVR25oCQERAM1EAN7Oqo8244/ZiDpmgKqIYKZICgBIZmAAZ2wvgV3h6n0w1ggGZoimBoggBogiAAWU2uHPe74hS6EcDAFFQRFMEQFQEQFUHMMqhcsf2uOGWrRAQBzaAKZgAIZAiGCIAGcEX1z8FpzgQhg2ZURQBANERDMHwlCKKdoSNe4UKc7rsVTdEQkQ1ZyRkZAiMyAAFekf3OON13K4IAgCErsqJDUiUiJECEq4j73XF63A1riRsQjUiJCMGQDBGMrnz3z8AZcTcgGQKQ2dpTn6RxEHS9WV5x/m44nW4yJGMEUkAB0JOo5CS9A2BX+tS74VS6kYAIEADWIYkBvPIxZnBl3O+OU+JueEXrCdfrIPAN4FUg+K44ne41DGB9sNRXjCMomgIAXoWD74Qz6bZXX4J/8R0EyHjiZ67wDjhLojqBIhCCwSt/YkAGBID4V3bgeLLkX38HXj+W64fxZP/5N9h7EH5QhXPWBc6j2xAVEWGtdL9ewt7BtivmmtkTgYGCIaC91gQQCZEAEdHAgmgvOUj++UIYAmyXpUMiwILY4ETLHERaSeGvUS1DiJtlURIRooGZAROKWlQFQAEYch5yfv3751q3ARjaGyLJX6qr3oaKgui9urldV2MihPV5FWxt0YiM6Ig8sSIOIkuRlzHsd+08DD+T74r5s8l0yr4EHLNHogg6qByl+KhrXwz9z2ScEafe/3Jra8NRgUAABkYGiWiZLRl2qs+7bm+1FNX1W86l+9UOaW+473U51eWdCSHuVvV/3tr8tKnGCA7QsQsxARIiGQABFMwlc2Teb/uO3bOcEHEZw88xcEK8UdUfj8YfFvVUcQTcVHVg2E/dgcTaU1J53vc/5xMtiH+xsfkPW1vbqI3kCVPBvBoCNqPOFc+HtD9ENTga+jbG9Vsu8N1v3j+8Ll67tHUT4qb3/+vNG39X1zeYd6pqc9Sg8ZOne2XdkPNZsop6ZjK1st6ox89TsmG4VY++Pp6BvaP1IYBD/HwyuV3Vd6vxNeAiKggWdbM5qh8Pi07y8344GIb8Mz7Rgujz8XQH+IOqGQ1DbTZ2VWzq3hWhaYb24M+r1bN21aX0+i0XOBM0gLXkan95Tcwus6cx4k5R/G83b/yyru8QbwOPhszdMRLfKooYIoqaGYJVzCmGKHlcNVCUzrlZGGrm1vTdqlkQsCS+11R3R6NtpUnUWo0BLQQVECryaPy87x8sl/kNx/pWKIlvVdXdunmvLKd9uE5+jIiDWFnNM7xcDmMqBWgZ45sH8DMkqlehAgGS4esY2xDU7DKZyoLoVl39dnPzF764rrYNOFbxImSoKI1jTVmTeO8Kx15yqdqmLODZlWJ2DfDjjY0/zWZR5G0DCVxfvSw3FbaJpgojkZEhEwxDbDxBSclol9ymLzp5l1QgAm4WxRfTzU3AHXSTNGwX3AAOISHjgEiqS8mzFPqc3nzjqXH3Xxw1Gp6c5V/9QBHkor+/ZL7bNP9lc+OXVXmLebeqN9j5rCRW+gKR+5h9WXNREDMBSowlUqVQp9zEPE6y6/1/3L5WMb+D2ouIjeNfTidbiI3oyKwGK00rUw59JWkkOon5PeJPx2P/Tsc1T3i9rP5uMt0CqmIaKRRRMWRMloaYsirRk6F7EYbXm+Qa5zkTBCBbJ+IBXukn+qoE+SyUzB+Mmv+8tfXr8Wg75etFuekKpzkjKvvgfAt5nhOVBSF6yTlFzlKVRekcGoQQx45u+bJ3vFNVfc7ylh6cEbec/0U9ulEUVZYSoUADy6CiEljJZ2zE7vrqc6T/53gWf8jIZTD1xfvN6F5RbwO6ti8NNKWokBGXOc5Qn7P7rl/N4o+Dq3PpthO66VVkcmLrAGc9gIx4u6p+u7X1242NXXYj0jF7aXtVA+8j0jKllnBeuEf9qvL+BsC2ysS5QbViro1Y1BAD4yilTyfTl32fVN7qaR+xu1c3N5y/WY/LGJkAULImI1QUAkVJY883yN/sbcP5VUpvtT4h3qqqz5vxFsCW8yYtASQ1IIqFX1p+LvFf2vZx3/Y/2RjOPMSvTRtfWTe+oQ7qGc8fIU69/9Vk+kVZX0+6MaTrriyTDMtVSCmyWxDuxeEp6J8k/R8v9v/3x9/916ODOWKqypWIAJbEjWGZxac0MfyHzc2xc/g2zzsh3ijK/zjd3HLFtChKAFRRyxlTIoECFcUs196P2I3UPmjG9Jb+pGa+U9UfllUt6kUqx2ZmjqTyfcldVRyRfrmYvxj69JPn5vQKWHjzXGOAr3ar9Wn+1JibEDe8/y9bOx9UzQ76HaCpKLWDqhSuTM73iCvHi6b642rxu6ODJ11rALeK6gVBabrJPgNZVg9YqHnTUeFGabhWlscx9nLZ+KEk2vHFrq8adC5pAaiaVKOSOU/si5AViM2EgDaK8v1q9K9+vkjx8jH+tbK64XyVc8XkVNkRoVOm3uEc5YjtZYH7oR9Oi3nOUwThVRLtxL5PzPuUtzDili/+5+1bn1fjT6bbt4pqE3mrakrnxVDrOtbNqigODL7puv/z4OXDdtWJJNWHfff72Wx/2Yovlf2QU8rJITTOTdhVal9MNzaKtygnnzp3nbkIYWxGIXgwSKJRnXGBvvSVGiBRTAEtbzflBuCO93xpA/dE18riWuEaspq19ogiZV0J8zznlzk/HoavVqtZjKdG9Gf47vWuiGieUyIGIHCEyKBo8qMGqoLoTt38Dxs7v/D1bjO+obSdU2WqmFvVoapsOn3R9Xtt/03o/tvRy8d9G0UMIAM8G/r77L6oJ8FIXKGlxhyzBDQaueK9ug6l+6ZdHsdwmYYgh3izLD8a1VueyjhUvijMVMjUF1KUqexDtgRChqaF6RbBJ3V5BJuzFI9ivIx5V8y7TLdYG5c8A0RFyTnlQWEg1zl82YV/PjhapXRqQHF6nckaipbQAEGBiBgRwYwMCmJGXD9965jvt1vb/+P02rWs19g3KVUpIUgAzWXRsTuO8eHQf90uv2wX36wWr5UKNWuzHOU8R+yBI7H3jixmFVSt1G0y3q2rTyaT/b7f77oLuSiIdgq3WxdbzldDgJCJCgYG8E49BjbJSM4UGNGbjnK8W3CLo//u/DylC0+YCPBe03zYVDcclpAQQFJCQxEV5MTckR1med73+Yxo53RnshYtzUwkAxgQmpmomioD1MyOCAE80e26+vXG9NfT6Z2yvFVWo5wbswJMRIKKFMVc0uPl8Tft/F9Wx9+sFu0PPZqBrSQ/Cn0L0INFVCUAQmJkAoxxpPbZdLrbNBc+7wiwWfidwo8djz1XhKnvJGdEJucFqc05AaFjAGREMvE5bSFum90oipr5QodSMv/ddPrhaDRl8qBooiqAaMjmXGY6zvnJ0J9T/H6W715HfEaqDgBMk6SsCdAc03ord0S7dfUPmxv/YTzaQapVS1ONAUyQSZkiQmt5FroDiX/sll+3i+MUfnqleYp/Xs4PdZhLiqoGAIzq0BAoC3Thrq/uNaOJ9+dzwYh36/puVY/JVUTrsEpUEln01DlYoAwlRTDnnEOErCRaIboQP66aTV+cHwIR4s26/rhubviyJueByEDFDCkhRMIB4CCGbxbzc84l522VBOAMHSGq5hRFsiP0TKJCANfK4n/a2fpP4/H7VXO7GdWqYblgyKYp5iSI6v0y5yXCl93qfrtapHTqVQaRp0P3eFi9TF0nWQwAUQkNoESqFZsg7xf1e6PR+XTXzO9V1QfjyU7VsJim3DSNAPQqS5Clg35ctAX0Kr7wBIhZnAGnPAL6tBpdL8qCzmUD8YuNzU3DCfHYlyV6NgZAIWpFVjnPcnw2dEfDeSrjmcccBCA1NnVAhmoggI6QRkR36vqj8fh/ubbzfuF3y+pW2YyydQcHJdh0cyMOoY+DloW4cpaGf+7a3x/PjuIpdr2GAXRZfr+YbSHcKuoNBABUNDOpnCu4zCm/74q7VfOveHyOvvHpeHzHldvoN8l7iWJSliPB3CKuLC9QOqIy52npTrYjQKfmLd2ajI6H/FHVPI/haX/6DoEAJdEnZTVNqcxl5YiMCTAzK/EqpWOQhxK+Xi7O8trn020nZ0dRQjJCAnKMyXRC/JvtnSnTdoo77K+Rn4QEbV+JjOvCE2Qy9qzMXUrPF8t/ms9n8YKoNqh8vVz+ajwJTNHUmQkgixbmHHFreap2ndx2UR6G4XQumD+rR5+Op1vIbggOgZxPIlb4ADgz+S6Hr1f9bybTaTPuQ2TTmhlMC8BNX+wIftqMHwzdXt+deqOe6HZVbytOEYqUSZEViRwSJO970QXBXh+etu35u+05h3hDAwZwCEKAAMzAqIXkEUBZVpBkIjjus48JY2y8Lx1rDkjqS2/kVGV99uFz7wAAxGyR4qMwHE8mm2styRjFyJRSHhFvIrxX1Z9MJkcx/NTAEfFWWV4DvMHFVACHgTyj831KWpY92F5IX3arr7r2WlVct8ZLbgARCVQKIpO8xe62t92iuu+LeYo//TjHzv+n6eYN57fIvAoIEDlgFobkOQjvp+FJGNqL5NzT6rtf/wzRIzEigBkoEjgCb1LGOBnCDrpphibmWqxCcAhgaqCGBgBIWPhiczT+rKkvs+mL2Ter5X7oF5ojGCKwgSVJ/VATT5y/5csP6saf5l4Z4P2q3kKqUy5DcjFrSoYY1AbCY5Vvu/YPy+XeMPxxtdxvV72aEAmAATAThDAh2CK6U5Y3yvKn6zukbe+/aCZbSFNfeEDIagIKnImTcyuy+337sFuJXaB2nbE5rNUSAEYkUzMFNARziAWAi7EMaWJUi1WGlWPPHCWFnJRIAGJOkqRkt1mPbjnecO5Umn54QXjSdY/6/tgsEZuhRwJRlQQqJeAm8i32N8vyR58cATTM94riRllVMRdZKmIREYSAsDR9meL3ff+o7+cp/3Gx2u+7Fqw3iABKbAim4lXGBLtVebOq3E/ik8bxnbK6hjQGKAELdo49GMVsAWguspfig3b1ou8vTIacV0UFa+8tGcCYyFRBhNUo5DF7l8WpoaqaKZM6yo4iWFTLopqypVwANsD3mmbi/YVKU1B9ktKR48AuZ2N0SERMIQ4MsuncLvlfb2z9qMfQE90qytvkdutmjFQj12VJjhNRcHyc877kQ9WgOog8HYZDgGPVpUogVM/RjJhIckO4U7ibZTH9oWaAAJvefzoa1aYjxybJOVdWDXLRJ12a7S2XX3XdsxTP3yTPo/sHeJVaIDA2Y1U2ZVVJERCWYVikgKO63t4ptjZnwyDsqmZcliUruCgfXLv+D1vb18vyMrrEg9Xq0TC0CBl5SEkJ+hjYUeV4hHi3qH+zsbPlizc1vBHzrybTm9Vo05feLIU+i7i6mfUdTMYr5ichPgthncJSs0chLJ2z8ShXVQ8YTbMqmHrTiaM7o/qj8fjNWyqZb5Tlx5PR7nSioUfDJDZkzUBYV61a7/3joT+OP/b470L3ST5hTbsBGbCiU0IjV1ZtTql0ujFeOHzSLV/GxJNNKypwnpAoyZT4mitHQ9pBGvHFaei9vn+wal8kiY6FXTS1dRG/SiEyVdhO+kk9Kl+5Jo+044pPitFuWTcKDkDAguaEplV1rPllTo+H/vDVBitmf5gf7+XUeR+KYmCXkDMggDnQEcJu4T9oasa/0HKnrn45HW8zjT07AzVLAiFrRLKimWt+JulFGPqcLyO5XFy09rovZ62A8ys91jd1LDiOq7nHR0N3SHikIk2TiJOqSMacN3xZRblO/ovJ1nvN6EJlOak+6vrvum6hFp1LTOW4NlOJwas0AHWMX4zq8au9d9P7z0eT277eQodDcESuriLCIoRqa/P50H+9Wuz1/Zvy1mGMT0P/UtISMRCrK5CYAEvCkekW2p2q+HA8ev0s3iyKT6t6A9D6rilLQqdACTgoLLPMcv5ycXx06RqNs3w3AIAhCIK+qvfCNxJpijgQhKqYe3qm6X4c/t8QnhvsLdtWISGKGSMUotyG3Wr86Wh6u6wrvjAmhGdD/33fHWqem2hZkPdghiKs6kHHnm963nLOEznEm774+3pyq6inShwzEmLpk6NWJDAvVL5t24MfcpFV76+W37WroxQ7AHAlkifiAmEMsAN0tyh/vbnpiABgu/B3vL/FvEVkfV8457gA9MY+AB4N3Yrx+9XqwvjvPLrtVcWbASiiIr7pTMjAAIVwHsOS4NDkQQy/7/rfHc+/6vpH82VvZOyIqWDKbcd93HbVrq/vVc2Nqr7whlY574fwJITDHLUoomQCKJFIBS1PR1VNuFsWY+aG6Cb7u1RsU1FlK5EMIaJlR+rdYdfOVJ+F0OYfK7ffr1bft6ujHDsA5QLRIaIzGBlsA+46/3HTbDjXMH88Gn1c1TuGGwqFGog59kjeyGemWQqPczyK4TKb5Bpn+VMEwHWpsbxKUSK86vhDFMCl5AXhs5z/te3+cb58EQID1fUkISkTema1sOxKLpzBBOlePXp/NH7atT9NKb0JNXsZw/2+3eVpQIAQavYlkeUECGXpioHer6v9GE3tDhcTwZFgpeCc60zaFKNnLIvDdvVdH+Y5/zQWPo5xb+gP8/haWWYgNQIAlFyCTslFoi2ij0bNyxh/MR5/UjWbhlXK6FxKmRkNUBGVXZ/5y9msy/nypRNn+O43Cun1pLgT0RAADVGQEnFg1xXu2yH802zxoG1bka+71cr5ZdZeRMBEsmeqHPuspdoO8W5RTi+RmjmK4UHfztGO+17W3eIiDOCZQWVc+rulf78sv2jGnzejKblCpGYuyIlKm0KbYwBsAb5czBenpX0NYK8fHvchAYWsSUDUTIRirrKOAadov9ma/t1kdK8sb3g/AXQhegQ0S1FS0iiaiHJdPVjO49tkrs9qhTpJSNpJq5muP5iMmIkD86rgZzH94bj73eHht8ulmJnZ/jA86FY75DabphGzlDfH0yxmpCOiOsSJ5Jt1fTiconu8iSDybBj+1C43iTen2yEKhOgLN/G+78OtUZ2G/vO63HbNZ9X0GtScc+WLIcesGszmKa+G/kBhdnbG4GnbfVMsf9Vs3EAuRJgRDFkMUUvVbaL/MB5PiW8a1iKFoYpKVC6qtu8HLlZUPM3x27h8K9M+k+613s2I3hGHRIBDHLCogucjs0OUZyH838ezPyyO94f+dRmSAfxhebyh+H5R33SVQAxs5CkPPYreLPk3zVZq/YPlIuTzLMIAVpK/7brPtq69NGiKukRPOVEXdlCKXpqqvu1KB36K5CUT6BC7BFmIzDUd2Ler7r+uFsuczzrmiel+6L9qVx9MR8V43LWzkn1ZFd6RI9yOaZT1blU0yFWUPiV2XI2b2aItynGH9JLSl6H/3cHT/JZFGefWd5tKzmzq2DNRQuhR5whPLH/Zrv5lOd8f+iA/uN5BDC/LeJTCQG5cVJ2KRxMJBFYL7zh3ry7vjEbfL5bnR06DyP4w7Ilsp7zpXANUAPksRGrJPMOIyACdCgMAKDpSAzEKhiuwQ4VvV8tzNgkDaHN+kWLPuEzRl1WyjGgICCk3KU+YvBpaNhFAROcEkLw3h4PJoabHYbXfrd623O2M5Nl6xINZEhEwQCJ2ipgAerT9FP/xePZs6E+SL28gqD6X8CwOrSmURVLLKmbKCF7V57xh9vl07C6SUNRskdM3XTvLssoygAnhur6FzJxZAeANCBRMDU0ZMqJ5F8GOQ3yZ0/yHtZA/RSf5RQxzlKUkK7wQZTXJalkLhRG7UpRiIlXHjp3PalRWA1hr+XnsH3fLH9X/XQYXtUIBKmAyFUQlMqKEMM/pcdf2pz2qCvYixWcpLkwCATgHiETsiQt2hUKd5aNRMy0uqDUwgCjyoF3NNa9MAkF2lAkynfRl2Ul5rgGqIvSaI4EVLhMdxvCoW4n92BR+hEHkZeifxH7wPAAIgBmYKIoV7D2yZUM1NnJABJQNxPHKpCU7kLjfte9QnXuulSGSY3KcTQUUCIFRENK59cbznJ7n+DyH45zAF4TOkWOkklzNfox02xcfTyaVu+DII2aHYdhP4VilIwhMkSm9snE0eFXUZQq2ijEyRabAeKzyqL9A5gcANTuO4c+reVf6RU4JEJBAgYFqV0BSS+LReXKoqAqC2KssIM/IDjQvfiKLXwZnCrBggIjE7AqPSAogYBkgmYmZIzpL4QuqT0J3v2+PUkxIogiAqooGI/bbrrrJxW93rm/6H0upP72FqPLHdrmfwlxlBRr4lXUDEBipkimACWqnkgq/yPkgpSPQ7nKPeZvTH49nT/IwyzERITkG9uhKV+UQLUtBrkBvYllUkVYqK8YHoX/cdZc/2ryJ0+g+aQxeG7B554iJiMws5xxyanPqzt701WwvDN+FbgG2TLFLKalJUo2Zs46NtxL+spnu1k3pLhCtDOBBuziAvCJr0SKTIAEQvpLjCQzBDDGX5VD4wxS+ms/+vFpcUsGIovtd+4+Hh8emCVGADAmByBAFGIiA0NAUs0IiN3iOTfWg7x6vVu/WpX6u71aVlCWrZnPkmJya5ZzN7Hy31Ul+Eob7oT8KMZiBd+gcGlCSMsmG8maCX2/uXOZMH0SexvBStWeKRIIIr8qgSYHMEEAJoa6Oc+6cP0Z4GYZLelUD6yX/cTY7AluqDmoCJAoxpMIVhS81W85iSEo8IEhVPVN9EWKf3rHn4cz0wvqbZo19SEMgQ8+ODC2rAzw/V5BUn4b+nxfHB32XnKOqLuraOU9qPslUqe7z5/X0WlFdpjTvYd8+iX2HEJkzkwGSESuywXrahxDkqni6WnyzWu7F+FbzrkXtxdDvhXAYU6eaAJLoEKIvysKVMcmQRJizc53Z3PRPs/nzrteLkmRn4SzfbWBASI7YxBwQAYAoGTjkk184GwawynkvhjlC9NyrZAQgRDMn0BhuktvOdsMVk4vO9AZwFOOjoX/Sd/MYlF0WY2SPzAagJirmeJ7T3OD7vns2XJzB+uH61uf81XL+IscWbAAQYgEwIDFAdlyV4txKZa75RYz35/Of04F4uiKoZmbGSGuLrnxBhiaCBo74Mn+OAnSmL1AXpkvJg4qYIoBHcKIj4rHah6PJbjO+cKlB8pOh/65rj0MMBop8EjAhm0JWE/Yvu27F/CKn4xDeNj4zsO9WyxeSl2gdghQOijKpiQGXJZZlIFxonqncX7Uv+5/VjXl6b46dDHxY95zZujcbDdcNrZepPzezlchXXfs89IOj7DkjGAATagwW4lZVfzbdulOPLkyqBZHnff9s3fYQoqsaAzYgIA/shXgAnMXwpOsOQwj6Llx0OT1L4cCkYxyYoCyiKRSFOG5BFyArR3OCP8wO5+lShbJn4TTrtjXfYGZrrtelDOuRa2jrxM4FHBnAKqc/LY8PLM0tx/UhBRSJYg5JYkE0NttAGl3kT8TsOMYXKc4AFpLVuQwoQEZO2UWkpeSF5K/n85dnl56ejyByv10+isOcoGXMjiOAMgWADmDlaOHwAPThYt6l9HMm55yxVdpJ9429noj0lwk9+Lqj/3yo2Srnb/tuf1i1JhEgqwpYBDNQRigN7jXjTze3L1wqmT6P4UHoO6JZ3weACBgBImFPcBT6nt3LOHTv2iQJAM/6dl+GhbOF5UWKmXkwayX3DkPlXkr6/dHhIPIzZyScPrZxHXQrosD6CwRQkMQgXxQFvomk+of5/NnQH4cuWDaGYMk8midDLQl3y/pu2fCFVShmsxC+6/qV48Nh6AB7hBasQ+yZZpLvt90ipXcOGACgy3lv6B/H/ljjcejFu8G0B1uBzkGPQL8+Oso/0YjeFqf+nfh6VMSr8TGoiIKwHgN7ee8oZi+GYQ4wTzGCmuMECoUzR6LimSfMO+x2x5MLl+qzPBuGvZRSWfRoA9KA2BNGz73n++2qO1fUvRCqut91j/tucNiDZIQAlj13oM+G7lHfHofh5w+hONW6kZmJaZ0azghCltEUzRiB6fImZOtcQc6r9ToI4Mg8ZdKsmRFqpN2q+fWNW+6igeBiepzi98PgptPBLBJGpkjYO36h+nIY8s8w7fWtzkPYG/o5GtXVYJLAhDF6OsjpwXyR9a8wI/6UY7QCiHPRuQFRjUFYmMFxjxgMk1F+m65pBXjYDUeT8QqgApg2TVDrRINJNiPnd5z/yMra+/ZcydQAepFHfT/3Lpqic8i80PgshT8ulp2cKSpcHkn1ZT886sNH0+3FqmeAgLgkOJD8dPnX+U8qp9AtYIeqj8F64oKIvPPIwDQgzMReinRvMxhAzZ51w/dDnAK2rrpe122IveWMJGCZoEcMfZyUdZfS+RtRUn3Wdf90dLQr1jlmdkf98NV88c+Hh+enmy9/q7MQ/rxYfNBMGwRGjGCPhvB41f2cTfhNnGbdBt/1q9akAa7MSiQkBKBoOpgeSzoMgRAu7ym7nP8wX7YKN0tsjo5EDYjJmaSU1DJCC3J9ND5oVwLnsZZVD4b+d/t7n4ymk5wRKWje64dluiCTcEmoWZfSo9Xq/zo63PElAoYgz4f26epiOfeSOMVhEmLtXMkMBkkEER2eDG1U02yWVd/KmhDAEVXMBbOaiRrgyVlJDdRMwbJqkkt9go6oYb+edAQAYhYu3eR6mVtlIk9UEBfMUSRITmby13h64Mx/MYdIf+l9f3Nu1rtb0VrWWi/y+qV3W/Bv8G9kEJBORrD+m17nCle4whWucIUrXOEKV7jC3whvNf5p/YZ/2/XfCXR27dH/XzjtEE9UVZVzTlVzzsMZ5djOOT6BA4QYYwyBiIqiYOYfrmzwulYCwcwK71erVUqJmcuy9L5AxBCGYQh6RrIREZ1zRVEQkZrFEPLZtdXrX66bWlXXKQGEkynYJ+fkV7dlqiklEWHnvPfMDK9ytQho665RkSzZ9OQkS0TM7JwDxKHvLzx2rgVt531O6RSJqijLu/fubW1tpZgODg4ePvz+1CWm0+lkMp1MJnXTiOiLF8+fP9svyvLO7fcmk8lrs1orAUREzGudRETqqv7zn/90eHgwGo3fe+/erVu3mPnR44cPH37fnzGVxzm3ubm5e/t23TQhDHtP92ZHR+mMoR3MvLW1dev2LhGJqq0L8AgNIKeEiEQMAKqSU37+bL9dtZPp9NqN6+PpFAHWyyJCijnF0Pf9arnsu35NuvNuPJlubW07575/cD9eVGrLzNONjY2trflsdgrdVVXeu3v3ww8/jCnfv//gp3QjYllVt3Zvv//+B9d2dkT16d7Tx08e55w3t3c+/+zza9euiYiKIAAyM/N62jIAEpP3XnI+OHy5WC68L27evPmrv/97VZ0dHzGdWaeJiM2o+ejjj27cvHk8m3Vtu5jPz6KbiMbTyUcffVRWVc45pagKzjli6rsOibzzAKCmZjafH6+WK18UN2/e2N3dBcCYYl1Vbdc5do6dSG7bdm9v7/Dg8PDgIIRgqhsbGzs71w4PD2aHh3JuKYTzfvvatbt37z31/jS9O8v6YQTAovjxjBwkqqrqzp33Pvzoo+vXbwzD8PDR9w++vT87PDhJ3xO4wkOGbmjbtlvPImDHACBqgObYI1hKwUwRgQmrwquo4/NqIHLOwxDAgAAlS4wxnysEGhgSIaL3Psa4alfMXFVlSNHMsstEpKqScorRzJxzZVF55/thWK5Wq1U7DEPTNHVVFWWxvbONSOPx2Dn34vnzrm1ns9n2zs7m9vbi+Ph8upl5NB5778fjyakjd0+6J3POfd//6KdVVd25e+/jTz65duNmzPnp/t7Dhw+PDg/Wo4KJWcAW/er46Oj5/v7RwaGoeu/YeQAw1XUXIRG9eP48xSQqKccsCQ29d3h2jhgRvXOF9yqSc8opq5wtiiIwkfcOEQ9evnz6dG82mwFCU9cxRlVdT9MyMwRcLpdrF51zCiF0bfvi+fPjo+MYQt3UTdOMxuOd7e3pZLoxmeSUF4v5Yr5YLRer1eq9O3dnBwfHs9lZjHvvJ5PJdDJZLBaTyeT/AwjPm4FncuZzAAAAAElFTkSuQmCC"></span><span>Download my Real Estate App</span></a>
 
   <h2 class="sec">I’m on YouTube</h2>
   <a class="yt" href="https://www.youtube.com/watch?v=KooVOahZybU" target="_blank" rel="noopener" aria-label="Watch Sami on YouTube"><span class="ttl">WATCH <i>NOW</i></span><span class="play" aria-hidden="true"></span></a>
 
-  <h2 class="sec">What My Clients Say</h2>
+  <h2 class='sec'>⭐ Client Reviews &amp; Testimonials</h2>
+  <p class='lead'>See what clients are saying about their experience working with Sami Johannes. Your trust means everything, and we'd love to hear about your experience too.</p>
   <div class="revs" id="revs" tabindex="0" aria-label="Client reviews, scroll sideways for more">
     <article class="rv"><h3>Client Review</h3><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><p>I consulted with Sami for MONTHS before I was finally ready to sell my home. She was extremely patient with me through it all. The listing process was so intentional. She arranged professional drone videos/photography for my listing. She arranged open house and tours well in advance. She kept me well informed throughout the entire process. She answered every question that I had, regardless of the time of day. I have already recommended Sami to my family/friends who are interested in buying and selling homes! She&rsquo;s awesome!</p><div class="who"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.7v3h3.9c2.3-2.1 3.5-5.2 3.5-8.9z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.300 14.300a7.200 7.200 0 0 1 0-4.600V6.600H1.300a12 12 0 0 0 0 10.800l4-3.100z"/><path fill="#EA4335" d="M12 4.800c1.800 0 3.300.6 4.600 1.800l3.400-3.400A12 12 0 0 0 1.300 6.600l4 3.100C6.200 6.900 8.900 4.800 12 4.800z"/></svg><span>Eboni, Google review</span></div></article>
   </div>
+
+  <div class='btns'><a class='btn' href='https://maps.app.goo.gl/JE9PNM6aNQtu6w116?g_st=ic' target='_blank' rel='noopener'>Read Reviews</a><a class='btn alt' href='https://maps.app.goo.gl/JE9PNM6aNQtu6w116?g_st=ic' target='_blank' rel='noopener'>Leave a Review</a></div>
 
   <div class="ref">
     <div class="banner"><b>YOUR REFERRALS</b><span>BUILD HOMES</span><em>Every connection makes a difference.</em></div>
@@ -291,6 +381,12 @@ h2.sec::after{background:linear-gradient(270deg,transparent,var(--gold))}
       <a href="https://www.facebook.com/closedbysamijo/" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-1.6 19.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 12 2Z"/></svg></i>Facebook</a>
       <a href="https://www.tiktok.com/@homewithsamijo" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.2v12.6a2.7 2.7 0 1 1-2.7-2.7c.3 0 .5 0 .8.1V8.7a6 6 0 1 0 5.1 5.9V8.3a7.3 7.3 0 0 0 4.2 1.3V6.4A4.3 4.3 0 0 1 16.6 2Z"/></svg></i>TikTok</a>
     </div>
+  </div>
+
+  <div class='cta2'>
+    <h2>Ready to Buy, Sell, or Build Your Dream Home?</h2>
+    <p>Whether you're purchasing your first home, relocating through the military, or exploring new construction opportunities, Sami is here to guide you every step of the way.</p>
+    <div class='btns'><a class='btn' href='#book'>Schedule a Consultation</a><a class='btn alt' href='#search'>Search Homes</a><a class='btn alt' href='#nc-guide'>Download Guides</a></div>
   </div>
 
   <div class="legal">
@@ -337,6 +433,55 @@ h2.sec::after{background:linear-gradient(270deg,transparent,var(--gold))}
     msg.textContent='Opening your email app to send this to Sami…';
     location.href='mailto:sami@coalitionpg.com?subject='+encodeURIComponent('New contact from your link in bio')+'&body='+encodeURIComponent('Name: '+nm+'\nEmail: '+em+'\nOK to send marketing emails: '+agree);
   });
+
+  /* ---- search tool ---- */
+  (function(){var ids=['sf-loc','sf-min','sf-max','sf-bed','sf-bath'],m=document.getElementById('sf-mail');function $(n){return Number(n).toLocaleString()}function u(){if(!m)return;var v=ids.map(function(i){return document.getElementById(i).value});var b='Hi Sami, I would like help finding a home.\nLocation: '+(v[0]||'Any')+'\nPrice: '+(v[1]?'$'+$(v[1]):'No min')+' to '+(v[2]?'$'+$(v[2]):'No max')+'\nBedrooms: '+(v[3]?v[3]+'+':'Any')+'\nBathrooms: '+(v[4]?v[4]+'+':'Any');m.href='mailto:sami@coalitionpg.com?subject='+encodeURIComponent('Home search request')+'&body='+encodeURIComponent(b)}ids.forEach(function(i){var e=document.getElementById(i);e.addEventListener('input',u);e.addEventListener('change',u)});u()})();
+
+  /* ---- rotating reviews ---- */
+  (function(){var r=document.getElementById('revs'),h=false;r.addEventListener('mouseenter',function(){h=true});r.addEventListener('mouseleave',function(){h=false});r.addEventListener('touchstart',function(){h=true},{passive:true});if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;setInterval(function(){var c=r.children;if(h||c.length<2)return;var i=Math.round(r.scrollLeft/(c[0].offsetWidth+14)),n=(i+1)%c.length;r.scrollTo({left:c[n].offsetLeft-r.offsetLeft-(r.clientWidth-c[n].offsetWidth)/2,behavior:'smooth'});},6000)})();
+  /* ---- Google Analytics 4 ---- */
+  var GA_ID=''; /* paste your Measurement ID here, e.g. G-XXXXXXXXXX */
+  function track(name,params){ if(window.gtag) window.gtag('event',name,params||{}); }
+  if(GA_ID){
+    var gs=document.createElement('script'); gs.async=true; gs.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(GA_ID); document.head.appendChild(gs);
+    window.dataLayer=window.dataLayer||[]; window.gtag=function(){window.dataLayer.push(arguments)};
+    window.gtag('js',new Date()); window.gtag('config',GA_ID);
+  }
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest('a[href]'); if(!a) return; var h=a.getAttribute('href'); if(!h||h==='#') return;
+    track('link_click',{link_text:(a.getAttribute('aria-label')||a.textContent||'').trim().slice(0,80),link_url:h.slice(0,200)});
+  });
+
+  /* ---- New Construction Guide lead gate ---- */
+  var LEAD_ENDPOINT=''; /* paste your form/CRM endpoint here (Formspree, Google Apps Script, Zapier, etc.) */
+  var GUIDE_URL='New_Construction_Guide_Booklet.pdf'; /* keep this PDF in the same folder as index.html */
+  (function(){
+    var open=document.getElementById('nc-open'), form=document.getElementById('nc-form'), msg=document.getElementById('nc-msg'),
+        done=document.getElementById('nc-done'), link=document.getElementById('nc-link');
+    if(!open||!form) return;
+    link.addEventListener('click',function(){ track('guide_open',{lead_source:'new_construction_guide'}); });
+    open.addEventListener('click',function(){ open.hidden=true; form.hidden=false; document.getElementById('nc-name').focus(); track('lead_form_open',{lead_source:'new_construction_guide'}); });
+    form.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var name=document.getElementById('nc-name').value.trim(), email=document.getElementById('nc-email').value.trim(), phone=document.getElementById('nc-phone').value.trim();
+      var digits=phone.replace(/\D/g,'');
+      if(!/^\S+@\S+\.\S+$/.test(email)){ msg.textContent='Please enter a valid email.'; return; }
+      if(digits.length<10||digits.length>11){ msg.textContent='Please enter a valid mobile number.'; return; }
+      if(!document.getElementById('nc-ok').checked){ msg.textContent='Please check the box to agree to be contacted.'; return; }
+      var payload={name:name,email:email,phone:phone,source:'New Construction Guide',page:location.href};
+      function unlock(){ link.href=GUIDE_URL; form.hidden=true; done.hidden=false; track('generate_lead',{lead_source:'new_construction_guide'}); }
+      if(LEAD_ENDPOINT){
+        msg.textContent='Sending…';
+        fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+          .then(function(r){ if(!r.ok) throw new Error('bad'); unlock(); })
+          .catch(function(){ msg.textContent='Something went wrong. Please try again or email sami@coalitionpg.com.'; });
+      } else {
+        /* no endpoint yet: send the lead to Sami as an email draft */
+        location.href='mailto:sami@coalitionpg.com?subject='+encodeURIComponent('New Construction Guide request')+'&body='+encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nPhone: '+phone+'\nOK to contact: Yes');
+        unlock();
+      }
+    });
+  })();
 })();
 </script>
 </body>
